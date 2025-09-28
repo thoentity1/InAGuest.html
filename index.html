@@ -212,13 +212,13 @@ inviteForm.addEventListener('submit', e => {
     return;
   }
 
- // Updated RSVP link
+// Updated RSVP link
 const rsvpLink = "https://thoentity1.github.io/nikahI-A/";
 const msg = `💍 *Wedding Invitation* 💍
 
 Dear ${guestname},
 
-You are invited to the nikah and reception of
+You are invited to the nikah and reception of  
 ✨ _Imtiaz Kader & Ammaarah Minnie_ ✨
 
 🎟 *Admits:* ${admit}
@@ -230,16 +230,19 @@ You are invited to the nikah and reception of
 
 👉 Please RSVP before *10 October 2025* here: ${rsvpLink}  
 
-🌸 With joy in our hearts and duʿās on our lips, we invite you to share in this blessed beginning, In Shaa Allah. 🌸
-`; // <-- closed the template string here ✅
+🌸 With joy in our hearts and duʿās, we invite you to share in this blessed beginning, In Shaa Allah. 🌸
+`; // ✅ closed string properly here
 
+// Open WhatsApp with prefilled message
 window.open(
   `https://wa.me/${guestphone}?text=${encodeURIComponent(msg)}`,
   "_blank",
   "noopener"
 );
+
 alert("Invitation sent via WhatsApp!");
 inviteForm.reset();
+
 
 // Step 2: Guest RSVP back to you
 const rsvpForm = document.getElementById('rsvpForm');
