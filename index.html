@@ -212,7 +212,7 @@ inviteForm.addEventListener('submit', e => {
     return;
   }
 
-  // Updated RSVP link
+ // Updated RSVP link
 const rsvpLink = "https://thoentity1.github.io/nikahI-A/";
 const msg = `💍 *Wedding Invitation* 💍
 
@@ -223,18 +223,23 @@ You are invited to the nikah and reception of
 
 🎟 *Admits:* ${admit}
 
-📅 *Date:* Saturday, 01 November 2025
+📅 *Date:* Saturday, 01 November 2025  
 🕒 *Time:* 2:00 PM  
 🍽 *Reception:* Will follow thereafter  
-📍 *Venue:* 45 Cotswold Road, Florida Hills, Roodepoort 1716
+📍 *Venue:* 45 Cotswold Road, Florida Hills, Roodepoort 1716  
 
-👉 Please RSVP before *10 October 2025* here: ${rsvpLink}
+👉 Please RSVP before *10 October 2025* here: ${rsvpLink}  
 
-🤍 We look forward to celebrating this blessed occasion with you! 🤍
-  window.open(`https://wa.me/${guestphone}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
-  alert("Invitation sent via WhatsApp!");
-  inviteForm.reset();
-});
+🌸 With joy in our hearts and duʿās on our lips, we invite you to share in this blessed beginning, In Shaa Allah. 🌸
+`; // <-- closed the template string here ✅
+
+window.open(
+  `https://wa.me/${guestphone}?text=${encodeURIComponent(msg)}`,
+  "_blank",
+  "noopener"
+);
+alert("Invitation sent via WhatsApp!");
+inviteForm.reset();
 
 // Step 2: Guest RSVP back to you
 const rsvpForm = document.getElementById('rsvpForm');
